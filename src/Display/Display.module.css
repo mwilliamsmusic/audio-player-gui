@@ -1,0 +1,20 @@
+.tableContainer {
+margin:auto;
+grid-area: table;
+}
+
+.gridContainer {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: auto;
+    grid-template-areas: ". . . . category category . . . ."
+    " . . table table table table table table . .";
+}
+
+.category {
+    grid-area: category;
+    text-align: center;
+}
+

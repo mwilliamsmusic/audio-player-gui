@@ -1,0 +1,38 @@
+td {
+    text-align: center;
+height: 50px;
+    background-color: #cfacf5;
+    width: 200px;
+
+
+}
+
+li {
+    list-style-type: none;
+text-align: center;
+
+}
+
+button {
+    border-radius: 5px;
+}
+audio{
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.trackInfo {
+
+    background-color: #cfacf5;
+    width: 97%;
+    text-align: center;
+
+
+}
+
+.trackAlign {
+    text-align: center;
+}
+.tableHeight {
+    min-height: 20px;
+}

@@ -1,13 +1,13 @@
 import React from "react";
 import audioData from '../AudioFiles/audio_files (1).json'
-import AudioList from "./AudioList/AudioList";
-
+import AudioList from "../AudioList/AudioList";
+import styles from "./Display.module.css"
 class Display extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            category: 'Relaxation',
+            category: 'Meditation',
         }
     }
 
@@ -29,27 +29,29 @@ class Display extends React.Component {
         const relaxation = () => {
             this.setState({category: "Relaxation"})
         };
+const listItems = categorySelect.map((data)=>
 
+        <AudioList key={data.id}
+                   label={data.label}
+                   category={data.category}
+                   speaker={data.speaker}
+                   url={data.url}
+                   description={data.description} />
+
+    );
         return (
 
-            <div>
+            <div className={styles.gridContainer}>
+                <div className={styles.category}>
                 <p>Please select a category: </p>
                 <button onClick={meditation}>Meditation</button>
                 <button onClick={breathing}>Breathing</button>
                 <button onClick={relaxation}>Relaxation</button>
+                </div>
 
-                {Object.keys(categorySelect).map((obj, i) => {
-                    return (
-                        <table>
-                        <tr>   <AudioList id={categorySelect[obj].id}
-                                       label={categorySelect[obj].label}
-                                       category={categorySelect[obj].category}
-                                       speaker={categorySelect[obj].speaker}
-                            url={categorySelect[obj].url}/>
-                        </tr>
-                        </table>
-                    )
-                })}
+            <div className={styles.tableContainer}>
+                {listItems}
+            </div>
             </div>
         );
     }
