@@ -1,38 +1,71 @@
-td {
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap');
+
+th, td {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.5rem;
     text-align: center;
-height: 50px;
-    background-color: #cfacf5;
-    width: 200px;
+    min-height: 100px;
+    max-height: 100px;
 
+    min-width: 300px;
+    max-width: 300px;
+    word-break: break-word;
+    padding: 5px;
+    color: darkslategray;
+}
 
+table {
+    border: 2px solid #a489c9;
+    width: 300px;
+    height: 100px;
+    background-color: rgba(207, 172, 245, 0.2);
+    margin: 5px;
 }
 
 li {
     list-style-type: none;
-text-align: center;
+    text-align: center;
+    margin: 8px;
 
 }
 
 button {
-    border-radius: 5px;
+    border-radius: 8px;
+  margin: 10px;
+    color: whitesmoke;
+    background-color: darkslategray;
+
+padding: 8px;
+    height: 40px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1rem;
+
+
 }
-audio{
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+
+audio {
+    color:rgba(207, 172, 245, 0.2) ;
+    border-radius: 10px;
+    padding: 5px;
+    width: 250px;
+    background-color: darkslategray;
+
 }
+
 .trackInfo {
+    color: darkslategray;
+    background-color: rgba(207, 172, 245, 0.2);
+    width: 98.5%;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.2rem;
+}
 
-    background-color: #cfacf5;
-    width: 97%;
+.errorDisplay {
     text-align: center;
-
 
 }
 
-.trackAlign {
-    text-align: center;
-}
-.tableHeight {
-    min-height: 20px;
+.boldText {
+    font-weight: bold;
+    margin: 4px;
 }
