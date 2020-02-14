@@ -27,7 +27,10 @@ class Display extends React.Component {
         const relaxation = () => {
             this.setState({category: "Relaxation"})
         };
-        const listItems = categorySelect.map((data) =>
+
+        const listItems = categorySelect
+            .filter(data => data.category === this.state.category)
+            .map((data) =>
             <AudioList key={data.id}
                        label={data.label}
                        category={data.category}
@@ -35,7 +38,6 @@ class Display extends React.Component {
                        url={data.url}
                        description={data.description}/>
         );
-
         return (
 
             <div className={styles.gridContainer}>
